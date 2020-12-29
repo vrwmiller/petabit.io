@@ -20,6 +20,20 @@ body {
   font-size: 0.9em;
   text-transform: uppercase;
 }
+.navbar > .navlinks > div {
+  margin-right: 20px;
+  border-bottom: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.navbar > .navlinks > div > a {
+  margin-right: 20px;
+  border-bottom: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s;
+}
 .navbar > .navlinks > a {
   margin-right: 20px;
   border-bottom: 1px solid transparent;
@@ -35,6 +49,13 @@ body {
   color: white;
   text-decoration: none;
 }
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+.active-nav-link a {
+  color: black !important;
+}
+
 
 /* Content styles */
 .content {
