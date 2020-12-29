@@ -39,7 +39,7 @@
           function officeoutput() {
             var request = new XMLHttpRequest()
             var x = document.getElementById('officein').value;
-            var url = 'https://api.weather.com/offices/' + x;
+            var url = 'https://api.weather.gov/offices/' + x;
             document.getElementById('officeout').innerHTML = x + '<br>' + url;
 
             request.open('GET', url, true)
