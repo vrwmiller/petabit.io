@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<html>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="domains.html">Domains</a>
+        <a href="http://blog.hostileadmin.com">Blog</a>
+        <a href="https://www.flickr.com/pdksh/">flickr</a>
+        <a href="https://www.youtube.com/s10ksh/">YouTube</a>
+      </div>
+
+      <div class="site"><a href="index.html">hostileadmin.com</a></div>
+
+    </div>
+
+    <div class="content">
+      <div class="datetime">
+        <button type="button"
+          onclick="document.getElementById('demo').innerHTML = Date()">
+          Click here to display date & time</button>
+
+        <p id="demo"></p>
+      </div>
+
+      <div class="nwsstations">
+        <input type="text" id="officein" maxlength=3></input>
+        <button type="submit" name="officesub"
+          onclick="officeoutput()">Enter NWS Office</button> 
+
+        <script>
+          function officeoutput() {
+            var request = new XMLHttpRequest()
+            var x = document.getElementById('officein').value;
+            var url = 'https://api.weather.com/offices/' + x;
+            document.getElementById('officeout').innerHTML = x + '<br>' + url;
+
+            request.open('GET', url, true)
+            request.onload = function() {
+
+            }
+
+            request.send()
+          }
+        </script>
+
+        <p id="officeout"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
