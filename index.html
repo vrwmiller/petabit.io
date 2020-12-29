@@ -43,8 +43,8 @@
             document.getElementById('officeout').innerHTML = x + '<br>' + url;
 
             request.open('GET', url, true)
-            request.onload = function() {
-
+            request.onload = function(result) {
+              console.log(result)
             }
 
             request.send()
