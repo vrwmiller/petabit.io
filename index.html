@@ -3,7 +3,7 @@
   <meta charset="UTF-8" />
   <title></title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="styles.css">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <html>
 <body>
@@ -19,5 +19,12 @@
     </div>
   </nav>
 </div>
+<script>
+let navWrapper = document.querySelector('.nav-wrapper'),
+    navToogler =  document.querySelector('.nav-toogler')
+navToogler.addEventListener('click', function (event) {
+  navWrapper.classList.toggle('active')
+})
+</script>
 </body>
 </html>
