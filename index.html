@@ -1,59 +1,30 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title></title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>petabit.io</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="styles.css">
 </head>
-<html>
 <body>
   <div class="container">
-    <div class="navbar">
+    <header class="navbar">
       <div class="navlinks">
         <a href="index.html">Home</a>
-        <a href="domains.html">Domains</a>
         <a href="http://blog.hostileadmin.com">Blog</a>
-        <a href="https://www.flickr.com/pdksh/">flickr</a>
+        <a href="https://www.flickr.com/pdksh/">Flickr</a>
         <a href="https://www.youtube.com/s10ksh/">YouTube</a>
       </div>
-
       <div class="site"><a href="index.html">petabit.io</a></div>
+    </header>
 
-    </div>
-
-    <div class="content">
-      <div class="datetime">
-        <button type="button"
-          onclick="document.getElementById('demo').innerHTML = Date()">
-          Click here to display date & time</button>
-
-        <p id="demo"></p>
-      </div>
-
-      <div class="nwsstations">
-        <input type="text" id="officein" maxlength=3></input>
-        <button type="submit" name="officesub"
-          onclick="officeoutput()">Enter NWS Office</button> 
-
-        <script>
-          function officeoutput() {
-            var request = new XMLHttpRequest()
-            var x = document.getElementById('officein').value;
-            var url = 'https://api.weather.gov/offices/' + x;
-            document.getElementById('officeout').innerHTML = x + '<br>' + url;
-
-            request.open('GET', url, true)
-            request.onload = function(result) {
-              console.log(result)
-            }
-
-            request.send()
-          }
-        </script>
-
-        <p id="officeout"></p>
-      </div>
-    </div>
+    <main class="content">
+      <section class="hero">
+        <h1>Welcome to petabit.io</h1>
+        <p>Exploring technology and the Internet.</p>
+      </section>
+    </main>
   </div>
 </body>
 </html>

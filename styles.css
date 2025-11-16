@@ -1,46 +1,116 @@
 /* Master styles */
-body {
-  font-family: Poppins, sans-serif;
-  margin: 0px;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  min-height: 100vh;
+}
+
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Nav styles */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background-image: url('images/gold-header1.png');
+  align-items: center;
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .navlinks {
   display: flex;
-  font-size: 0.9em;
+  gap: 2rem;
+}
+
+.navbar .navlinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.9rem;
   text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
 }
-.navbar > .navlinks > a {
-  margin-right: 20px;
-  border-bottom: 1px solid transparent;
+
+.navbar .navlinks a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.site a {
   color: white;
   text-decoration: none;
-  transition: color 0.5s;
-}
-.navlinks a:hover {
-  color: black;
-  border-bottom: 1px solid black;
-}
-.site a{
-  color: white;
-  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 /* Content styles */
 .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.content > div {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+}
+
+.hero {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navlinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
 }
