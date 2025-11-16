@@ -17,42 +17,12 @@
         <a href="https://www.youtube.com/s10ksh/">YouTube</a>
       </div>
 
-      <div class="site"><a href="index.html">petabit.io</a></div>
+      <div class="site"><a href="index.html">hostileadmin.com</a></div>
 
     </div>
 
     <div class="content">
-      <div class="datetime">
-        <button type="button"
-          onclick="document.getElementById('demo').innerHTML = Date()">
-          Click here to display date & time</button>
-
-        <p id="demo"></p>
-      </div>
-
-      <div class="nwsstations">
-        <input type="text" id="officein" maxlength=3></input>
-        <button type="submit" name="officesub"
-          onclick="officeoutput()">Enter NWS Office</button> 
-
-        <script>
-          function officeoutput() {
-            var request = new XMLHttpRequest()
-            var x = document.getElementById('officein').value;
-            var url = 'https://api.weather.gov/offices/' + x;
-            document.getElementById('officeout').innerHTML = x + '<br>' + url;
-
-            request.open('GET', url, true)
-            request.onload = function(result) {
-              console.log(result)
-            }
-
-            request.send()
-          }
-        </script>
-
-        <p id="officeout"></p>
-      </div>
+      <p>Domains for sale!</p>
     </div>
   </div>
 </body>
